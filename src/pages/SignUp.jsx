@@ -23,7 +23,7 @@ function SignUp() {
   const Signup = (e) => {
     e.preventDefault();
     // Submit the form data to your backend here
-    fetch('http://localhost:3001/users/register', {
+    fetch('https://node-backend-mcjr.onrender.com/users/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
