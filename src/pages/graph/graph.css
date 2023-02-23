@@ -1,0 +1,42 @@
+.Menuu{
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    z-index: -11;
+   
+}
+
+.info{
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cont{
+   display: flex;
+   flex-direction: row;
+}
+
+.ui{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.graph{
+    padding: 2rem;
+    border: 2px salmon solid;
+    width: fit-content;
+    height: fit-content;
+}
+
+textarea{
+    font-size: x-large;
+    font-weight: 900;
+    border-radius: 3rem;
+    padding: 1rem;
+    /* background-color: rgb(32, 32, 103);
+    color: aliceblue; */
+    
+
+
+}

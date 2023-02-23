@@ -1,0 +1,130 @@
+
+.Modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4037e2;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 900px;
+    max-height: 700px;
+}
+
+  
+.Menu{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    height: fit-content;
+    padding: 7rem;
+    margin: 2rem;
+    border-radius: 3rem;
+    background-color: rgba(94, 94, 90, 0.311);
+}
+.icon{
+    background-color: rgb(88, 196, 250);
+    padding: 2px;
+    border-radius: 8px;
+    size: 10px;
+}
+label{
+    color: #000;
+}
+
+.option{
+    display: flex;
+    flex-direction: column;
+    /* padding: 5rem; */
+    height: fit-content;
+    margin-right: 5rem;
+    border-radius: 25px;
+    background-color: rgb(0, 0, 0);
+    align-content: center;
+    align-items: flex-start;
+}
+
+.cont{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+}
+ul{
+    margin: 4px;
+}
+.project{
+    display: flex;
+    flex-direction: row;
+    padding: 4rem;
+    height: fit-content;
+    background-color: #000000;
+    border-radius: 40px;
+}
+.newpr{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+
+}
+.op{
+    margin: 2rem;
+    border-radius: 10px;
+    padding: .5rem;
+    align-items:flex-start;
+    
+    background-color: rgb(71, 75, 74);
+    list-style-type: none;
+    /* padding: 1.3rem; */
+}
+
+.title{
+    font-size: xx-large;
+    padding-left: 1rem;
+
+}
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: larger;
+    color: #000;
+}
+.crt{
+    padding: 1rem;
+    font-size: xx-large;
+    margin-left: -2rem;
+}
+
+.image{
+    background-image: url(./dss.png);
+    height: 400px;
+    width: 200px;
+}
+
+/* img{
+    height: 650px;
+    width: 650px;
+    padding: 2rem;
+    margin-left: 6rem;
+    float: left;
+    animation: float-up-down 2s ease-in-out infinite;
+    
+    
+} */
+@keyframes float-up-down {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.create{
+    font-size: x-large;
+    border-radius: 15px;
+    padding: .4rem;
+    margin-top: 1rem;
+}
