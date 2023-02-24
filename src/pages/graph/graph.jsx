@@ -25,7 +25,7 @@ const Graph = () => {
 
   useEffect(() => {
     console.log(id);
-    axios.get(`http://localhost:3001/graph/create/${id}`)
+    axios.get(`https://node-backend-mcjr.onrender.com/graph/create/${id}`)
       .then(res => {
         setData(res.data.data);
         setName(res.data.name)
