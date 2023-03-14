@@ -9,7 +9,7 @@ function FeaturesBlocks() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 mb-4">This service provides many features and good customer experience.</h2>
-            <p className="text-xl text-gray-400">.</p>
+            <p className="text-xl text-gray-400">😀😀</p>
           </div>
 
           {/* Items */}
@@ -66,7 +66,7 @@ function FeaturesBlocks() {
             </div>
 
             {/* 5th item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
+            {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="400" data-aos-anchor="[data-aos-id-blocks]">
               <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <rect className="fill-current text-purple-600" width="64" height="64" rx="32" />
                 <g strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd">
@@ -76,10 +76,10 @@ function FeaturesBlocks() {
               </svg>
               <h4 className="h4 mb-2">hello</h4>
               <p className="text-lg text-gray-400 text-center">hello.</p>
-            </div>
+            </div> */}
 
             {/* 6th item */}
-            <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
+            {/* <div className="relative flex flex-col items-center" data-aos="fade-up" data-aos-delay="500" data-aos-anchor="[data-aos-id-blocks]">
               <svg className="w-16 h-16 mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
                 <rect className="fill-current text-purple-600" width="64" height="64" rx="32" />
                 <g transform="translate(21 22)" strokeLinecap="square" strokeWidth="2" fill="none" fillRule="evenodd">
@@ -90,7 +90,7 @@ function FeaturesBlocks() {
               </svg>
               <h4 className="h4 mb-2">hello</h4>
               <p className="text-lg text-gray-400 text-center">hello.</p>
-            </div>
+            </div> */}
 
           </div>
 

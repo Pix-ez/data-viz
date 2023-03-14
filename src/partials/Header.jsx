@@ -93,14 +93,14 @@ function Header() {
                   HOME
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/pricing" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Pricing</Link>
+              </li> */}
+              <li>
+                <Link to="/contact" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Contact</Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">Contact</Link>
-              </li>
-              <li>
-                <Link to="/about" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">About us</Link>
+                <Link  to="/https://github.com/Pix-ez?tab=repositories" className="text-gray-300 hover:text-gray-200 px-4 py-2 flex items-center transition duration-150 ease-in-out">About us</Link>
               </li>
               {/* 1st level: hover */}
               <Dropdown title="Support">
@@ -109,7 +109,7 @@ function Header() {
                   <Link to="/contact" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Contact us</Link>
                 </li>
                 <li>
-                  <Link to="/help" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">hello</Link>
+                  <Link to="/https://github.com/Pix-ez?tab=repositories" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">Learn more</Link>
                 </li>
                 <li>
                   <Link to="/404" className="font-medium text-sm text-gray-400 hover:text-purple-600 flex py-2 px-4 leading-tight">hello</Link>

@@ -1,29 +1,31 @@
 import React from 'react';
 import {  useState } from "react";
 import { Link , useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-import Header from '../partials/Header';
+
 import PageIllustration from '../partials/PageIllustration';
 
 
-function SignUp() {
+function Contact() {
 
   
 
   const [username, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [password_hash, setPassword] = useState('');
+  const [message, setMessage] = useState('');
   const navigate = useNavigate()
 
   const formData = {
     username: username,
     email: email,
-    password_hash: password_hash
+    message: message
   };
-  const Signup = (e) => {
+  const Submit = (e) => {
     e.preventDefault();
     // Submit the form data to your backend here
-    fetch('http://localhost:3001/users/register', {
+    fetch('http://localhost:3001/users/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
@@ -31,8 +33,9 @@ function SignUp() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        toast.success(data.msg)
         // alert('signup succesful👌🤡')
-        navigate("/signin");
+        // navigate("/signin");
       })
       .catch((error) => {
         console.error(error);
@@ -41,9 +44,7 @@ function SignUp() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
 
-      {/*  Site header */}
-      <Header />
-
+    
       {/*  Page content */}
       <main className="grow">
 
@@ -58,7 +59,8 @@ function SignUp() {
 
               {/* Page header */}
               <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-                <h1 className="h1">Welcome. We exist to make Visualization easier.</h1>
+                <h1 className="h1">Contact Form .</h1>
+                <h5 className="h5">Write about your compiants and experience.</h5>
               </div>
 
               {/* Form */}
@@ -96,12 +98,12 @@ function SignUp() {
                   </div>
                   <div className="flex flex-wrap -mx-3 mb-4">
                     <div className="w-full px-3">
-                      <label className="block text-gray-300 text-sm font-medium mb-1" htmlFor="password">Password <span className="text-red-600">*</span></label>
-                      <input id="password" type="password" 
+                      <label className="block text-gray-300 text-sm font-medium mb-1" >Message <span className="text-red-600">*</span></label>
+                      <input id="message" type="text" 
                       className="form-input w-full text-gray-300" 
-                      placeholder="Password (at least 8 characters)" required
-                      value={password_hash}
-                      onChange={(e) => setPassword(e.target.value)} />
+                      placeholder="write your message/feedback" required
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)} />
                     </div>
                   </div>
                   {/* <div className="text-sm text-gray-500 text-center">
@@ -109,13 +111,13 @@ function SignUp() {
                                 </div> */}
                   <div className="flex flex-wrap -mx-3 mt-6">
                     <div className="w-full px-3">
-                      <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full"
-                      onClick={Signup}>Sign up</button>
+                      <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-full" onClick={Submit}
+                      >Submit</button>
                     </div>
                   </div>
                 </form>
                 <div className="text-gray-400 text-center mt-6">
-                  Already have account? <a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out" href='signin' >Sign in</a>
+                  Go Back  <a className="text-purple-600 hover:text-gray-200 transition duration-150 ease-in-out" href='/' > ⬅️ </a>
                 </div>
               </div>
 
@@ -131,4 +133,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default Contact;

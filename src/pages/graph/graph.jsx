@@ -24,13 +24,14 @@ const Graph = () => {
   const [notes, setNotes] = useState('');
 
   useEffect(() => {
-    console.log(id);
+    // console.log(id);
     axios.get(`http://localhost:3001/graph/create/${id}`)
       .then(res => {
         setData(res.data.data);
         setName(res.data.name)
         setDesc(res.data.desc)
-        console.log(res.data.data)
+        setNotes(res.data.note)
+        console.log(res.data.note)
         let d = res.data.data;
         d = d.map(gettitle);
         function gettitle(item) {
@@ -39,7 +40,21 @@ const Graph = () => {
         setOptions(d);
       })
       .catch(err => console.log(err));
-  },[id]);
+  },[]);
+
+  const formData = {
+    note: notes,
+    name: name
+  };
+  const Save =()=>{
+    // console.log(formData)
+    axios.post('http://localhost:3001/file/save' , formData,{
+      headers:{'Content-Type': 'application/json'},
+    })
+    .then(res=>{
+      console.log(res.status)
+    })
+  }
 
   const handleArraySelection = (e) => {
     setSelectedArray(data[e.target.value]);
@@ -121,7 +136,8 @@ const Graph = () => {
       </div>
       <div className='ml-4 mb-2 text-white'>
       <label  className=' text-white'>Take notes</label>
-        <textarea  className='text-black'></textarea>
+        <textarea  className='text-black' value={notes} onChange={(e) => setNotes(e.target.value)}></textarea>
+        <button className="btn text-white bg-purple-600 hover:bg-purple-700 w-100" onClick={Save} >Save</button>
 
         
       </div>

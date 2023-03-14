@@ -67,7 +67,7 @@ function HeroHome() {
               </a>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
-                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="#0">
+                <a className="btn text-white bg-gray-700 hover:bg-gray-800 w-full sm:w-auto sm:ml-4" href="https://github.com/Pix-ez?tab=repositories">
                   Learn more
                 </a>
               </div>

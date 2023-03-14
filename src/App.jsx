@@ -17,6 +17,7 @@ import ResetPassword from './pages/ResetPassword';
 import Main from './pages/Main';
 import Graph from './pages/graph/graph';
 import SetPassword from './pages/Setpass';
+import Contact from './pages/Contact';
 
 
 
@@ -51,7 +52,7 @@ function App() {
         
       
         
-        
+        <Route exact path="/contact" element={<Contact/>} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/reset-password" element={<ResetPassword />} />
