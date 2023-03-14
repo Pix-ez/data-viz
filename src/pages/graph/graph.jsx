@@ -24,8 +24,13 @@ const Graph = () => {
   const [notes, setNotes] = useState('');
 
   useEffect(() => {
+<<<<<<< HEAD
     // console.log(id);
     axios.get(`http://localhost:3001/graph/create/${id}`)
+=======
+    console.log(id);
+    axios.get(`https://node-backend-mcjr.onrender.com/graph/create/${id}`)
+>>>>>>> 365b77c00645143a09cd354f736085addb28fa70
       .then(res => {
         setData(res.data.data);
         setName(res.data.name)

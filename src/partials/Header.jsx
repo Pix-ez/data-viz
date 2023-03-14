@@ -38,7 +38,7 @@ function Header() {
 
   const getName = async () => {
     try {
-        const res = await axios.post("http://localhost:3001/users/userData", {
+        const res = await axios.post("https://node-backend-mcjr.onrender.com/users/userData", {
             token: window.localStorage.getItem("token"),
         }, {
             headers: {
