@@ -32,7 +32,7 @@ const Menu = () => {
   useEffect(() => {
     const user_id = localStorage.getItem('user_id');
     if (user_id) {
-      axios.get(`https://node-backend-mcjr.onrender.com/project/get_name/${user_id}`)
+      axios.get(`http://localhost:3001/project/get_name/${user_id}`)
         .then(res => {
           const projectData = res.data.project;
           if (Array.isArray(projectData)) {
@@ -67,7 +67,7 @@ const Menu = () => {
     data.append('uid', localStorage.getItem('user_id'))
   
     try {
-      const response = await axios.post('https://node-backend-mcjr.onrender.com/file/upload', data);
+      const response = await axios.post('http://localhost:3001/file/upload', data);
       if (response.data.msg === 'ok') {
         toast.success('File uploaded successfully');
       } else {
@@ -91,7 +91,7 @@ const Menu = () => {
     localStorage.setItem('projectDesc', description)
   
     try {
-      const response = await axios.post("https://node-backend-mcjr.onrender.com/project/newpr", formdata, {
+      const response = await axios.post("http://localhost:3001/project/newpr", formdata, {
         headers: { "Content-Type": "application/json" },
       });
   
@@ -108,7 +108,7 @@ const Menu = () => {
 
  
   const Delete = (id) =>{
-      axios.delete(`https://node-backend-mcjr.onrender.com/project/delete_project/${id}`)
+      axios.delete(`http://localhost:3001/project/delete_project/${id}`)
         .then(res => {
           console.log(res.data);
           if (res.data.msg === true) {

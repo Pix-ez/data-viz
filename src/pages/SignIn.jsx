@@ -53,13 +53,9 @@ useEffect(() => {
     } else {
       setPasswordError('');
     }
-  //http://localhost:3001/users/login
+  
     if (formValid && emailError === '' && passwordError === '') {
-<<<<<<< HEAD
       axios.post("http://localhost:3001/users/login", formData, {
-=======
-      axios.post('https://node-backend-mcjr.onrender.com/users/login', formData, {
->>>>>>> 365b77c00645143a09cd354f736085addb28fa70
         headers: { 'Content-Type': 'application/json' },
       })
         .then((response) => {
@@ -90,13 +86,8 @@ useEffect(() => {
 
   const Login = () => {
     console.log("button is presed")
-    
-    
-<<<<<<< HEAD
     axios.post('http://localhost:3001/login', formData, {
-=======
-    axios.post('https://node-backend-mcjr.onrender.com/users/login', formData, {
->>>>>>> 365b77c00645143a09cd354f736085addb28fa70
+
       headers: { 'Content-Type': 'application/json' },
     })
       .then((response) => {
